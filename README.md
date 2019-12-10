@@ -38,6 +38,9 @@ Documentation of your results in an appropriate format, both links to files and 
 
 Any implementation details or notes we need to repeat your work. 
 - Does this code require other pip packages, software, etc?
+![Image of score](https://github.com/ucsd-ml-arts/generative-audio-jiaye-andy/blob/master/1.PNG)
+![Image of score](https://github.com/ucsd-ml-arts/generative-audio-jiaye-andy/blob/master/2.PNG)
+![Image of score](https://github.com/ucsd-ml-arts/generative-audio-jiaye-andy/blob/master/3.PNG)
 - Does it run on some other (non-datahub) platform? (CoLab, etc.)
 
 ## Reference
