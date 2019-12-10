@@ -1,11 +1,11 @@
 # Final Project
 
-Your Name, yourcontact@ucsd.edu
+Qiyuan Wu, qiw103@ucsd.edu
 
 (Your teammates' contact info, if appropriate)
 
 ## Abstract Proposal
-
+For this project, we plan to convert a black and white classic clip from Modern Times by Charlie Chaplin into a colored video using the Deep Coloring neural network. We will also convert the background music and effects into a one with modern tune using MIDI analysis. We will revisit the neural network as well as transfer
 FIRST STEP: Write up a description (in the form of an abstract) of what you will revisit for your final project. This should be one paragraph clearly describing your concept and approach. What are your desired creative goals? How are you expanding on something we covered in the class? How will you present your work next Wednesday in the final project presentations? 
 
 ## Project Report
