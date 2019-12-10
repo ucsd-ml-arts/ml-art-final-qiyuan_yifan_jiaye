@@ -8,8 +8,8 @@ Jiaye Wang, jiw609@ucsd.edu
 (Your teammates' contact info, if appropriate)
 
 ## Abstract Proposal
-For this project, we plan to convert a black and white classic clip from Modern Times by Charlie Chaplin into a colored video using the Deep Coloring neural network. We will also convert the background music and effects into a one with modern tune using MIDI analysis. We will revisit the neural network as well as transfer
-FIRST STEP: Write up a description (in the form of an abstract) of what you will revisit for your final project. This should be one paragraph clearly describing your concept and approach. What are your desired creative goals? How are you expanding on something we covered in the class? How will you present your work next Wednesday in the final project presentations? 
+For this project, we plan to convert a black and white classic clip from Modern Times by Charlie Chaplin into a colored video using the Deep Coloring neural network. We will also convert the background music and effects into a one with modern tune using MIDI analysis. We will revisit the neural network as well as style transfer knowledge we learned during latter part of the class. The inspiration of re-newing Chaplin's masterpiece is that its essence is still so relatable and relevant even after 83 years! The mundane, repeated and redundant work in pipeline resembles exactly the routine of most office and service workers of the current societies. Like the preface of the movie says, this is a story of industry, of individual enterprise - humanity crusading in the pursuit of happiness. This universal and eternal theme is what makes this movie an everlasting classic. The creative goal is to rejuvenate the classic by colorizing the clip intelligently and also innovating the background theme music to give it a more modern perception. We will present the work next Wednesday by going over the background of the movie, and then show the audience the original clip as well as the colorized clip. We will also walk through the procedures and rationale of the neural network model we have used.
+ 
 
 ## Project Report
 
