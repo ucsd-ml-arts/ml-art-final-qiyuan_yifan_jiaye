@@ -22,6 +22,14 @@ Briefly describe the files that are included with your repository:
 
 Your code for generating your project:
 - Python: generative_code.py
+
+GANSynth: https://magenta.tensorflow.org/gansynth
+• colab: https://colab.research.google.com/notebooks/magenta/gansynth/gansynth_demo.ipynb
+
+mp3 to midi transformer:
+
+https://www.bearaudiotool.com/mp3-to-midi
+
 - Jupyter notebooks: generative_code.ipynb
 
 ## Results
@@ -38,9 +46,21 @@ Documentation of your results in an appropriate format, both links to files and 
 
 Any implementation details or notes we need to repeat your work. 
 - Does this code require other pip packages, software, etc?
-![Image of score](https://github.com/ucsd-ml-arts/generative-audio-jiaye-andy/blob/master/1.PNG)
-![Image of score](https://github.com/ucsd-ml-arts/generative-audio-jiaye-andy/blob/master/2.PNG)
-![Image of score](https://github.com/ucsd-ml-arts/generative-audio-jiaye-andy/blob/master/3.PNG)
+I(Jiaye Wang) extracted the background music of the movie, and pass the mp3 file music in to the mp3 to midi file transformer. 
+It took me a long time to pass a wave audio file into the Gansynth, but then I realize I can just transfer the mp3 to midi.
+The reason of me passing the mp3 to mid file transformer is because the Gansynth only accept the midi file as input.
+I am slo attaching the link of the transformer below. In the Gansynth there are two ways to generate new audio.
+They both switch the timbre of the original audio file to another timbre. 
+I download both wave file for my teamates to choose. (generated_clip (1).wav;generated_clip (2).wav)
+Here is a graph of the input midi file.
+![Image of score](https://github.com/ucsd-ml-arts/ml-art-final-qiyuan_yifan_jiaye/blob/master/1.PNG)
+
+
+![Image of score](https://github.com/ucsd-ml-arts/ml-art-final-qiyuan_yifan_jiaye/blob/master/2.PNG)
+
+Here is the graph for the generated audio.
+
+![Image of score](https://github.com/ucsd-ml-arts/ml-art-final-qiyuan_yifan_jiaye/blob/master/3.PNG)
 - Does it run on some other (non-datahub) platform? (CoLab, etc.)
 
 ## Reference
@@ -48,4 +68,7 @@ Any implementation details or notes we need to repeat your work.
 References to any papers, techniques, repositories you used:
 - Papers
 - Repositories
+GANSynth: https://magenta.tensorflow.org/gansynth
+• colab: https://colab.research.google.com/notebooks/magenta/gansynth/gansynth_demo.ipynb
+
 - Blog posts
