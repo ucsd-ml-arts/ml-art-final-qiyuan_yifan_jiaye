@@ -1,6 +1,9 @@
 # Final Project
 
+
 Qiyuan Wu, qiw103@ucsd.edu
+
+Jiaye Wang, jiw609@ucsd.edu
 
 (Your teammates' contact info, if appropriate)
 
@@ -16,6 +19,9 @@ Upload your project report (4 pages) as a pdf with your repository, following th
 
 Briefly describe the files that are included with your repository:
 - trained models
+
+Gansynth: audio timbre transformer.
+
 - training data (or link to training data)
 
 ## Code
