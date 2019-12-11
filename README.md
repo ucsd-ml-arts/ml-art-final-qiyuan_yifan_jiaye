@@ -16,9 +16,11 @@ For this project, we plan to convert a black and white classic clip from Modern 
 Upload your project report (4 pages) as a pdf with your repository, following this template: [google docs](https://drive.google.com/open?id=1mgIxwX1VseLyeM9uPSv5GJQgRWNFqtBZ0GKE9d4Qxww).
 
 ## Model/Data
+We used NoGAN to automatically color the videos. This is a new type of GAN training that has been developed to solve some key issues in the previous DeOldify model. It provides the benefits of GAN training while spending minimal time processing direct GAN training. Instead, most of the training time is spent pretraining the generator and critic separately with more straight-forward, fast and reliable conventional methods. A key inspiration here is that those more "conventional" methods generally get us most of the results we need, and that GANs can be used to close the gap on reality. During the very short amount of actual GAN training the generator not only gets the full realistic colorization capabilities that used to take days of progressively resized GAN training, but it also doesn't accrue nearly as much of the artifacts and other ugly baggage of GANs. In fact, we can pretty much eliminate glitches and artifacts almost entirely depending on our approach. This is a new and incredibly effective technique.
 
-Briefly describe the files that are included with your repository:
-- trained models
+The video is supposed to be stable because NoGAN training is crucial to getting the kind of stable and colorful images seen in this iteration of DeOldify. NoGAN training combines the benefits of GAN training (wonderful colorization) while eliminating the nasty side effects (like flickering objects in video). In fact, videos are rendered using isolated image generation without any sort of temporal modeling tacked on. The process performs 30-60 minutes of the GAN portion of "NoGAN" training, using 1% to 3% of imagenet data once. Then, as with still image colorization, we "DeOldify" individual frames before rebuilding the video.
+
+In addition to improved video stability, there is an interesting thing going on here worth mentioning. It turns out the models we run, even different ones and with different training structures, keep arriving at more or less the same solution. That's even the case for the colorization of things you may think would be arbitrary and unknowable, like the color of clothing, cars, and even special effects (as seen in "Metropolis").
 
 Gansynth: audio timbre transformer.
 
@@ -40,18 +42,11 @@ https://www.bearaudiotool.com/mp3-to-midi
 
 ## Results
 
-Documentation of your results in an appropriate format, both links to files and a brief description of their contents:
-- What you include here will very much depend on the format of your final project
-  - image files (`.jpg`, `.png` or whatever else is appropriate)
-  - 3d models
-  - movie files (uploaded to youtube or vimeo due to github file size limits)
-  - audio files
-  - ... some other form
+We have uploaded the re-generated audio files here in the GitHub. We have uploaded the colorized videos at the Google drive: https://drive.google.com/drive/u/1/folders/0AM7acZ7fifDSUk9PVA
 
 ## Technical Notes
+The colorization model steps are as follows: First train the generator in a conventional way by itself with just the feature loss. Next, generate images from that, and train the critic on distinguishing between those outputs and real images as a basic binary classifier. Finally, train the generator and critic together in a GAN setting (starting right at the target size of 192px in this case). Now for the weird part: All the useful GAN training here only takes place within a very small window of time. There's an inflection point where it appears the critic has transferred everything it can that is useful to the generator. Past this point, image quality oscillates between the best that you can get at the inflection point, or bad in a predictable way (orangish skin, overly red lips, etc). There appears to be no productive training after the inflection point. And this point lies within training on just 1% to 3% of the Imagenet Data! That amounts to about 30-60 minutes of training at 192px.
 
-Any implementation details or notes we need to repeat your work. 
-- Does this code require other pip packages, software, etc?
 I(Jiaye Wang) extracted the background music of the movie, and pass the mp3 file music in to the mp3 to midi file transformer. 
 It took me a long time to pass a wave audio file into the Gansynth, but then I realize I can just transfer the mp3 to midi.
 The reason of me passing the mp3 to mid file transformer is because the Gansynth only accept the midi file as input.
@@ -71,10 +66,8 @@ Here is the graph for the generated audio.
 
 ## Reference
 
-References to any papers, techniques, repositories you used:
-- Papers
-- Repositories
+
 GANSynth: https://magenta.tensorflow.org/gansynth
 • colab: https://colab.research.google.com/notebooks/magenta/gansynth/gansynth_demo.ipynb
 
-- Blog posts
+
