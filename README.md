@@ -25,6 +25,9 @@ In addition to improved video stability, there is an interesting thing going on 
 Gansynth: audio timbre transformer.
 
 - training data (or link to training data)
+https://www.youtube.com/watch?v=nLlMbHatRwo
+https://www.youtube.com/watch?v=6n9ESFJTnHs
+https://www.youtube.com/watch?v=BZk-nIy9RY8
 
 ## Code
 
