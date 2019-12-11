@@ -34,7 +34,8 @@ https://www.youtube.com/watch?v=BZk-nIy9RY8
 ## Code
 
 Your code for generating your project:
-- Python: generative_code.py
+video colorize:
+https://colab.research.google.com/drive/1W4c3nWjt0gskJLdA_OsI6fs80YhpjJH-#scrollTo=6Fz5ggA2Ukv4
 
 GANSynth: https://magenta.tensorflow.org/gansynth
 • colab: https://colab.research.google.com/notebooks/magenta/gansynth/gansynth_demo.ipynb
@@ -43,11 +44,11 @@ mp3 to midi transformer:
 
 https://www.bearaudiotool.com/mp3-to-midi
 
-- Jupyter notebooks: generative_code.ipynb
+
 
 ## Results
 
-We have uploaded the re-generated audio files here in the GitHub. We have uploaded the colorized videos at the Google drive: https://drive.google.com/drive/u/1/folders/0AM7acZ7fifDSUk9PVA
+We have uploaded the re-generated audio files here in the GitHub. We have uploaded the colorized videos at the Google drive: https://drive.google.com/drive/u/0/folders/0AM7acZ7fifDSUk9PVA
 
 ## Technical Notes
 The colorization model steps are as follows: First train the generator in a conventional way by itself with just the feature loss. Next, generate images from that, and train the critic on distinguishing between those outputs and real images as a basic binary classifier. Finally, train the generator and critic together in a GAN setting (starting right at the target size of 192px in this case). Now for the weird part: All the useful GAN training here only takes place within a very small window of time. There's an inflection point where it appears the critic has transferred everything it can that is useful to the generator. Past this point, image quality oscillates between the best that you can get at the inflection point, or bad in a predictable way (orangish skin, overly red lips, etc). There appears to be no productive training after the inflection point. And this point lies within training on just 1% to 3% of the Imagenet Data! That amounts to about 30-60 minutes of training at 192px.
