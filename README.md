@@ -68,7 +68,7 @@ Here is a graph of the input midi file.
 Here is the graph for the generated audio.
 
 ![Image of score](https://github.com/ucsd-ml-arts/ml-art-final-qiyuan_yifan_jiaye/blob/master/3.PNG)
-- Does it run on some other (non-datahub) platform? (CoLab, etc.)
+- Run on Colab
 
 ## Reference
 
