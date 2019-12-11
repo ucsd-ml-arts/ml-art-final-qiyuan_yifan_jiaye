@@ -5,6 +5,8 @@ Qiyuan Wu, qiw103@ucsd.edu
 
 Jiaye Wang, jiw609@ucsd.edu
 
+Yifan Hou, yihou@ucsd.edu
+
 (Your teammates' contact info, if appropriate)
 ![wink](https://img3.doubanio.com/view/photo/l/public/p2362920220.jpg)
 ## Abstract Proposal
