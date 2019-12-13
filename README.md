@@ -16,6 +16,7 @@ For this project, we plan to convert a black and white classic clip from Modern 
 ## Project Report
 
 Upload your project report (4 pages) as a pdf with your repository, following this template: [google docs](https://drive.google.com/open?id=1mgIxwX1VseLyeM9uPSv5GJQgRWNFqtBZ0GKE9d4Qxww).
+https://docs.google.com/document/d/1CTJqoi7zuRVS5kyZxsVcUmYZQqGOjraV8Ivhdjcdei0
 
 ## Model/Data
 We used NoGAN to automatically color the videos. This is a new type of GAN training that has been developed to solve some key issues in the previous DeOldify model. It provides the benefits of GAN training while spending minimal time processing direct GAN training. Instead, most of the training time is spent pretraining the generator and critic separately with more straight-forward, fast and reliable conventional methods. A key inspiration here is that those more "conventional" methods generally get us most of the results we need, and that GANs can be used to close the gap on reality. During the very short amount of actual GAN training the generator not only gets the full realistic colorization capabilities that used to take days of progressively resized GAN training, but it also doesn't accrue nearly as much of the artifacts and other ugly baggage of GANs. In fact, we can pretty much eliminate glitches and artifacts almost entirely depending on our approach. This is a new and incredibly effective technique.
